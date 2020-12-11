@@ -54,9 +54,7 @@ function setup() {
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose', gotPoses);
   handpose = ml5.handpose(video, modelReady);
-  button = createButton('demo');
-  button.position(19, 19);
-  button.mousePressed(change);
+  
   
 }
 
@@ -91,6 +89,9 @@ function modelReady() {
 function gotPose(results) {
   // do something with the results
   hands = results;
+  button = createButton('demo');
+  button.position(19, 19);
+  button.mousePressed(change);
 };
 
 function draw() {
