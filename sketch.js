@@ -213,9 +213,11 @@ function touchMoved(){
 }
 
 function change(){
-  select++
-  if(select == 4){
-    select = 0
+  if(playy >= 2){
+    select++
+    if(select == 4){
+      select = 0
+    }
   }
 }
 
